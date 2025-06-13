@@ -9,16 +9,15 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
-token = os.getenv('TOKEN')
-id = os.getenv('ID')
+BOT_TOKEN = os.getenv('TOKEN')
+ID = os.getenv('ID')
 # Token del bot de Telegram
 # BOT_TOKEN = "7820202353:AAE2kTD8kIK_zIpZYcPiekSeCHEzQhTuRPU"
-BOT_TOKEN = token
 bot = telebot.TeleBot(BOT_TOKEN)
 
 # Configuración de id de Telegram
 # TELEGRAM_CHAT_ID = "272783109"
-TELEGRAM_CHAT_ID = id
+TELEGRAM_CHAT_ID = ID
 
 def enviar_notificacion_telegram(mensaje):
     try:
