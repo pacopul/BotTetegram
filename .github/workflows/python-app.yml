@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
   
     env:
-      USER: ${{ secrets.TOKEN }}
-      PASSWORD: ${{ secrets.ID }}    
+      TOKEN: ${{ secrets.TOKEN }}
+      ID: ${{ secrets.ID }}    
 
     steps:
       - name: Checkout repo
