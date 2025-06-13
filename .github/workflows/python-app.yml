@@ -3,6 +3,9 @@ name: Envio telegram cada hora solo pm
 on:
   schedule:
     - cron: '0 12-23 * * *'  # Ejecutar cada hora entre 12:00 PM y 11:00 PM
+  push:
+    branches: 
+      - main
 
 jobs:
   run-script:
