@@ -5,19 +5,19 @@ import os
 # Configuración de logs 
 # 💡 Emojis para logs ctrl cmd space 💡
 logging.basicConfig(
-    filename="telegram.log"
+    filename="telegram.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 token = os.getenv('TOKEN')
 id = os.getenv('ID')
-
 # Token del bot de Telegram
 # BOT_TOKEN = "7820202353:AAE2kTD8kIK_zIpZYcPiekSeCHEzQhTuRPU"
-bot = telebot.TeleBot(token)
+BOT_TOKEN = token
+bot = telebot.TeleBot(BOT_TOKEN)
 
 # Configuración de id de Telegram
-#TELEGRAM_CHAT_ID = "272783109"
+# TELEGRAM_CHAT_ID = "272783109"
 TELEGRAM_CHAT_ID = id
 
 def enviar_notificacion_telegram(mensaje):
